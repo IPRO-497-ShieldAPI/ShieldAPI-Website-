@@ -64,7 +64,7 @@ margin-top: 2rem;
 
 .btn {
   display: inline-block;
-  background-color: #2563eb;     /* blue background */
+  background-color: #2563eb;     
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -74,7 +74,34 @@ margin-top: 2rem;
 }
 
 .btn:hover {
-  background-color: #1d4ed8;     /* darker blue on hover */
-  transform: scale(1.03);        /* subtle hover grow */
+  background-color: #1d4ed8;     
+  transform: scale(1.03);        
+}
+.plan.disabled {
+  opacity: 0.7;
+  position: relative;
+  background: #f3f4f6;
 }
 
+.plan.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.coming-soon {
+  color: #b91c1c;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.btn.disabled-btn {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #f9fafb;
+}
+
+.btn.disabled-btn:hover {
+  background-color: #9ca3af;
+  transform: none;
+}
