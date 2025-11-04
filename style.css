@@ -186,3 +186,43 @@ main, section {
   max-width: 900px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+.emails {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.emails h2 {
+  color: #111827;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.emails p {
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.emails p:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .emails {
+    padding: 1.5rem;
+  }
+
+  .emails p {
+    font-size: 1rem;
+  }
+}
