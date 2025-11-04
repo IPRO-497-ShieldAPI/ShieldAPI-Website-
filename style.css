@@ -106,9 +106,83 @@ margin-top: 2rem;
   transform: none;
 }
 .contact-btn {
-  background-color: #059669; /* green tone */
+  background-color: #059669; 
 }
 
 .contact-btn:hover {
   background-color: #047857;
+}
+
+:root {
+  --main-bg: #d5e5d1;         
+  --main-accent: #2563eb;      
+  --text-dark: #111827;
+  --text-muted: #374151;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--main-bg);
+  margin: 0;
+  color: var(--text-dark);
+}
+
+
+header {
+  background-color: #111827;
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+
+.tagline {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: var(--main-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.03);
+}
+
+main, section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
