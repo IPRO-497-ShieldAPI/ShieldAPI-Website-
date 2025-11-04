@@ -61,3 +61,20 @@ text-align: center;
 padding: 1rem;
 margin-top: 2rem;
 }
+
+.btn {
+  display: inline-block;
+  background-color: #2563eb;     /* blue background */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;     /* darker blue on hover */
+  transform: scale(1.03);        /* subtle hover grow */
+}
+
