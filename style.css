@@ -1,4 +1,4 @@
-/* style.css */
+
 body {
 font-family: Arial, sans-serif;
 margin: 0;
@@ -225,4 +225,33 @@ main, section {
   .emails p {
     font-size: 1rem;
   }
+}
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn.disabled-btn {
+  background-color: #9ca3af; /* light gray */
+  cursor: not-allowed;
+  color: #f9fafb;
+  opacity: 0.8;
+  pointer-events: none;
+  border: none;
+}
+
+.btn.disabled-btn:hover {
+  background-color: #9ca3af;
+  transform: none;
+}
+
+.btn.secondary {
+  background-color: #4b5563;
+}
+
+.btn.secondary:hover {
+  background-color: #374151;
 }
