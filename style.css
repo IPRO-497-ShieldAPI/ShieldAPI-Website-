@@ -1,257 +1,182 @@
-
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f8f9fa;
-color: #333;
-}
-header {
-background-color: #111827;
-color: white;
-padding: 1rem;
-}
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-nav ul {
-list-style: none;
-display: flex;
-gap: 1rem;
-}
-nav ul li a {
-color: white;
-text-decoration: none;
-font-weight: 500;
-}
-nav ul li a.active, nav ul li a:hover {
-text-decoration: underline;
-}
-.hero {
-text-align: center;
-padding: 4rem 2rem;
-}
-.btn {
-display: inline-block;
-background-color: #2563eb;
-color: white;
-padding: 0.75rem 1.5rem;
-border-radius: 5px;
-text-decoration: none;
-margin-top: 1rem;
-}
-.content, .pricing {
-padding: 2rem;
-max-width: 800px;
-margin: auto;
-}
-.plan {
-background: white;
-border: 1px solid #ccc;
-padding: 1.5rem;
-margin: 1rem 0;
-border-radius: 8px;
-}
-footer {
-background-color: #111827;
-color: white;
-text-align: center;
-padding: 1rem;
-margin-top: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #2563eb;     
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #1d4ed8;     
-  transform: scale(1.03);        
-}
-.plan.disabled {
-  opacity: 0.7;
-  position: relative;
-  background: #f3f4f6;
-}
-
-.plan.disabled:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.coming-soon {
-  color: #b91c1c;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.btn.disabled-btn {
-  background-color: #9ca3af;
-  cursor: not-allowed;
-  pointer-events: none;
-  color: #f9fafb;
-}
-
-.btn.disabled-btn:hover {
-  background-color: #9ca3af;
-  transform: none;
-}
-.contact-btn {
-  background-color: #059669; 
-}
-
-.contact-btn:hover {
-  background-color: #047857;
-}
-
+/* ============ GLOBAL STYLES ============ */
 :root {
-  --main-bg: #d5e5d1;         
-  --main-accent: #2563eb;      
+  --bg-light: #d5e5d1;
+  --bg-white: #ffffff;
   --text-dark: #111827;
   --text-muted: #374151;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --gray: #9ca3af;
+  --gray-dark: #4b5563;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: var(--main-bg);
-  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg-light) 0%, #e9f3e3 100%);
   color: var(--text-dark);
+  line-height: 1.6;
 }
 
-
+/* ============ HEADER / NAVBAR ============ */
 header {
   background-color: #111827;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .logo img {
   height: 40px;
   width: auto;
-  vertical-align: middle;
 }
 
-
-.tagline {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: var(--text-muted);
-  text-align: center;
-  margin-top: 0.5rem;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
 }
 
-
-.btn {
-  display: inline-block;
-  background-color: var(--main-accent);
+nav ul li a {
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
 }
 
-.btn:hover {
-  background-color: #1d4ed8;
-  transform: scale(1.03);
+nav ul li a.active,
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-main, section {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 2rem;
+/* ============ MAIN CONTENT CARD ============ */
+main {
+  background-color: var(--bg-white);
   margin: 2rem auto;
-  max-width: 900px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-.emails {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: 2rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.emails h2 {
-  color: #111827;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+/* ============ DOWNLOAD PAGE ============ */
+.download-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
 }
 
-.emails p {
-  font-size: 1.1rem;
-  color: #2563eb;
-  font-weight: 500;
-  margin: 0.5rem 0;
-  letter-spacing: 0.5px;
+.subtext {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
-.emails p:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .emails {
-    padding: 1.5rem;
-  }
-
-  .emails p {
-    font-size: 1rem;
-  }
-}
-.download-buttons {
+.download-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.btn.disabled-btn {
-  background-color: #9ca3af; /* light gray */
-  cursor: not-allowed;
-  color: #f9fafb;
-  opacity: 0.8;
-  pointer-events: none;
+/* Active download button */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
   border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.btn.disabled-btn:hover {
-  background-color: #9ca3af;
+.btn-active {
+  background-color: var(--blue);
+  color: white;
+}
+
+.btn-active:hover {
+  background-color: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+/* Disabled buttons */
+.btn-disabled {
+  background-color: var(--gray);
+  color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.btn-disabled:hover {
   transform: none;
 }
 
-.btn.secondary {
-  background-color: #4b5563;
+/* Secondary button (Back Home) */
+.btn-secondary {
+  background-color: var(--gray-dark);
+  color: white;
+  margin-top: 1rem;
 }
 
-.btn.secondary:hover {
+.btn-secondary:hover {
   background-color: #374151;
+}
+
+/* ============ TEXT ============ */
+.help-text {
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+
+.help-text a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.help-text a:hover {
+  text-decoration: underline;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  color: white;
+  background-color: #111827;
+  padding: 1rem;
+  margin-top: 3rem;
+  border-top: 3px solid #2563eb;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 600px) {
+  main {
+    padding: 2rem 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 0.75rem;
+  }
 }
